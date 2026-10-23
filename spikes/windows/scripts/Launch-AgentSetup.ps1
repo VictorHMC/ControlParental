@@ -16,7 +16,7 @@ try {
     $arguments = '-NoProfile -ExecutionPolicy Bypass -File "' + $setup + '" -TargetSid ' + $targetSid
     $statusFile = Join-Path $private 'install-status.json'
     if (Test-Path -LiteralPath $statusFile) { Remove-Item -LiteralPath $statusFile -ErrorAction Stop }
-    $process = Start-Process -FilePath $shell -ArgumentList $arguments -Verb RunAs -WindowStyle Hidden -PassThru -ErrorAction Stop
+    $process = Start-Process -FilePath $shell -ArgumentList $arguments -Verb RunAs -WindowStyle Normal -PassThru -ErrorAction Stop
     $process.WaitForExit()
     if ($process.ExitCode -ne 0) { throw 'El instalador no termino correctamente. Revisar .local\install-status.json si existe.' }
     if (-not (Test-Path -LiteralPath $statusFile)) { throw 'La instalacion no ha comunicado un resultado. No se da por instalada.' }
@@ -24,7 +24,7 @@ try {
     Write-Host $status.Message
     if ($status.State -ne 'Installed') { exit 1 }
     $control = Join-Path $PSScriptRoot 'Show-AgentControl.ps1'
-    Start-Process -FilePath $shell -ArgumentList ('-NoProfile -ExecutionPolicy Bypass -File "' + $control + '"') -WindowStyle Hidden
+    Start-Process -FilePath $shell -ArgumentList ('-NoProfile -ExecutionPolicy Bypass -File "' + $control + '"') -WindowStyle Normal
 } catch {
     Write-Host ('No se completo la instalacion: ' + $_.Exception.Message)
     exit 1

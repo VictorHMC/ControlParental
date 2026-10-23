@@ -44,6 +44,8 @@ Los tests usan directorios aleatorios dentro del resultado de compilacion, pipes
 
 La entrada mas sencilla es abrir `Instalar-ControlParental.cmd` desde el Explorador de archivos. Compila el agente, conserva el usuario de la sesion original, solicita UAC y abre la ventana privada de contrasena. Si termina correctamente, abre el control del modo hijo. Si se cancela UAC no vuelve a solicitarlo automaticamente. No se debe ejecutar como actualizador de una instalacion previa.
 
+Las ventanas del instalador y control se lanzan en modo visible; puede verse una consola temporal detras del formulario. `Recover-Installer.ps1` permite recuperar exclusivamente un intento atascado en `AwaitingPassword`: exige administrador, verifica los PID y rutas de ambos scripts y rechaza actuar si existen archivos o servicio instalado.
+
 Cerrar primero el filtro de consola anterior para liberar `127.0.0.1:18777`. Obtener el SID desde la sesion que usaran padre/hijo, antes de cambiar de cuenta para UAC:
 
 ```powershell
@@ -96,6 +98,8 @@ Configurar solo el perfil de navegador de laboratorio descrito en [README](READM
 8. Registrar ACL efectivas, denegacion de acceso a estado desde usuario estandar y limites de una sesion administradora.
 
 Estos pasos siguen pendientes hasta adjuntar evidencia real. Las pruebas automatizadas del motor recrean el controlador y reconectan clientes; no son un reinicio del equipo ni la ejecucion del servicio bajo SCM.
+
+`scripts/Test-InstalledWeb.ps1 -ExpectedMode Inactive` comprueba linea base por HTTPS; despues de activar y cerrar la ventana, ejecutar con `-ExpectedMode Active`. La prueba consulta al agente y utiliza el mismo proxy del navegador, sin contrasenas en sus argumentos. Exige rechazo CONNECT 403 para `example.com` y acceso HTTPS 2xx para `example.org`. No sustituye la comprobacion visual en navegador.
 
 ## Retirar o recuperar
 
