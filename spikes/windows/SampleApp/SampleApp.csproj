@@ -1,0 +1,7 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <AssemblyName>ControlParental.SampleApp</AssemblyName>
+    <Description>Aplicacion inocua para pruebas de AppLocker</Description>
+  </PropertyGroup>
+</Project>

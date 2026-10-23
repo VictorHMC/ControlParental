@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <OutputType>Exe</OutputType>
+    <AssemblyName>ControlParental.Agent</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="../WebFilter/ProxyCore.cs" Link="Shared/ProxyCore.cs" />
+    <Compile Include="../WebFilter/ParentPassword.cs" Link="Shared/ParentPassword.cs" />
+  </ItemGroup>
+</Project>

@@ -57,7 +57,9 @@ En fase 0 se admite una consola local para el estado; la confirmación remota se
 
 **Pregunta:** ¿podemos restringir ejecución y navegación del hijo manteniendo acceso de recuperación del responsable?
 
-**Requisitos:** equipo o VM recuperable, edición/build registradas, cuenta administradora y cuenta infantil estándar. Probar integración final también en equipo físico. Conservar mecanismo de recuperación fuera de la política.
+**Requisitos:** equipo o VM recuperable, edición/build registradas y recuperacion administrativa. Se admite sesion compartida del padre con modo hijo y desbloqueo por contrasena segun [ADR 0002](decisiones/0002-sesion-compartida-y-contrasena.md); comparar tambien con cuenta infantil estandar para medir resistencia a manipulacion. Probar integración final también en equipo físico. Conservar mecanismo de recuperación fuera de la política.
+
+Primer [laboratorio Windows](../spikes/windows/README.md) e [informe parcial](../spikes/resultados/WINDOWS-01-inicial.md) disponibles. Siguen pendientes las pruebas reales C01-C12. Agregar pruebas de contrasena incorrecta/correcta, cierre de interfaz y reinicio: el objetivo final es que solo la autorizacion del responsable desbloquee mediante la app, incluso tras cerrar su interfaz.
 
 **Prototipo:** servicio mínimo con registro de estado y aplicación de reglas de red mediante API del sistema; investigar WFP. Evaluar AppLocker/App Control por edición, alcance por usuario y actualización. C#/.NET es candidato para el servicio; la integración WFP puede requerir interoperabilidad nativa. La selección final queda pendiente de evidencia.
 

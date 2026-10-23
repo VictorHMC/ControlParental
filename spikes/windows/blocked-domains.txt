@@ -1,0 +1,2 @@
+# Solo dominios inocuos de prueba. Bloquea tambien sus subdominios.
+example.com
