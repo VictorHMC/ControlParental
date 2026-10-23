@@ -14,6 +14,7 @@ Arquitectura y primer laboratorio Windows, 23 de octubre de 2026. Hay un filtro 
 - [Decisión de tecnología](docs/decisiones/0001-flutter-y-componentes-nativos.md).
 - [Plantilla de resultados](spikes/resultados/PLANTILLA.md).
 - [Laboratorio Windows](spikes/windows/README.md) e [informe inicial](spikes/resultados/WINDOWS-01-inicial.md).
+- [Agente persistente Windows](spikes/windows/AGENT.md) e [informe de componentes](spikes/resultados/WINDOWS-02-agente.md).
 - [Sesión compartida y contraseña de desbloqueo](docs/decisiones/0002-sesion-compartida-y-contrasena.md).
 
 ## Estructura prevista

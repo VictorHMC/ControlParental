@@ -2,6 +2,8 @@
 
 Estado: compilado; pruebas locales del filtro y evaluacion XML completadas. Bloqueo real de ejecucion, navegacion en navegador, restauracion de politicas y persistencia tras reinicio **pendientes**. No hay servicio instalado.
 
+Incremento posterior: ya existe un [agente de servicio y control local](AGENT.md), con persistencia de modo e intentos fallidos, instalador privado y 32 pruebas adicionales. Su instalacion y validacion real se registran en un informe separado; el resto de este documento describe el primer laboratorio de consola.
+
 ## Modalidad acordada
 
 El hijo puede utilizar la sesion del padre. El futuro modo hijo se activa dentro de esa sesion y exige contrasena del responsable para desbloquear o cambiar reglas. Durante el modo hijo, las restricciones afectan tambien al padre que use esa misma cuenta.

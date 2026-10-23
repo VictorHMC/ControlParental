@@ -4,7 +4,9 @@ Estado: diseño inicial sujeto a resultados de fase 0. Fecha: 2026-10-23.
 
 ## Objetivo y alcance
 
-Actualizacion: se admite sesion compartida padre/hijo y se exige contrasena del responsable para desbloquear. Ver [ADR 0002](decisiones/0002-sesion-compartida-y-contrasena.md). El servicio Windows mantiene restricciones al cerrar la interfaz; su implementacion queda pendiente. La cuenta infantil separada es recomendacion de resistencia, no requisito del modo inicial.
+Actualizacion: se admite sesion compartida padre/hijo y se exige contrasena del responsable para desbloquear. Ver [ADR 0002](decisiones/0002-sesion-compartida-y-contrasena.md). El servicio Windows debe mantener restricciones al cerrar la interfaz. La cuenta infantil separada es recomendacion de resistencia, no requisito del modo inicial.
+
+Hay un [agente Windows de laboratorio](../spikes/windows/AGENT.md) para el filtro HTTPS, con SCM e IPC. Su motor esta probado; instalacion, permisos efectivos y pruebas bajo SCM siguen pendientes. AppLocker aun no esta integrado con ese agente.
 
 Administrar reglas familiares desde dispositivos compatibles y aplicarlas localmente en equipos de los hijos. La paridad de interfaz no implica paridad de capacidades. El producto mostrará qué restricciones están disponibles, activas o degradadas en cada equipo.
 

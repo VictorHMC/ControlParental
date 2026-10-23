@@ -1,6 +1,6 @@
 # ADR 0002: modo hijo en sesion compartida y desbloqueo autenticado
 
-Fecha: 2026-10-23. Estado: aceptada como requisito; implementacion de servicio pendiente.
+Fecha: 2026-10-23. Estado: aceptada como requisito; agente de laboratorio implementado para HTTPS, instalacion y validacion real pendientes.
 
 ## Contexto
 
@@ -20,6 +20,8 @@ Los hijos pueden utilizar la sesion de Windows del padre. El usuario requiere qu
 Una aplicacion no puede garantizar resistencia frente a alguien que usa una cuenta administradora y puede modificar sus servicios y politicas. La contrasena protege el flujo normal; la separacion de privilegios de Windows determina la resistencia a manipulacion. Se mostrara esta diferencia al responsable.
 
 El primer laboratorio implementa verificacion de contrasena en consola y scripts de AppLocker, con estado privado ignorado por Git. No implementa aun el servicio ni almacenamiento resistente a manipulacion. Cerrar el filtro o borrar sus archivos evade su proteccion de laboratorio; esto debe resolverse antes de piloto.
+
+El [segundo incremento Windows](../../spikes/windows/AGENT.md) agrega servicio de laboratorio para HTTPS, IPC autenticado y almacenamiento con ACL preparado por instalador. El motor y protocolo estan probados; las ACL efectivas y el comportamiento del servicio instalado siguen pendientes. El bloqueo AppLocker aun no esta integrado en el agente.
 
 ## Criterios de aceptacion para el servicio
 

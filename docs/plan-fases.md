@@ -14,6 +14,8 @@ Fase 0 iniciada en Windows; las siguientes fases siguen pendientes. Las estimaci
 
 Windows iniciado: [laboratorio ejecutable](../spikes/windows/README.md) e [informe parcial](../spikes/resultados/WINDOWS-01-inicial.md). Compilacion y pruebas de componentes completadas; auditoria/bloqueo real, navegadores y recuperacion pendientes. Se admite sesion compartida y desbloqueo con contrasena segun [ADR 0002](decisiones/0002-sesion-compartida-y-contrasena.md).
 
+Servicio Windows preparado en el [incremento 02](../spikes/windows/AGENT.md): persistencia del modo HTTPS y autenticacion mediante IPC. 50 comprobaciones de componentes aprobadas en total. La instalacion bajo SCM, permisos efectivos, navegacion, reinicio y bloqueo de aplicaciones integrado siguen pendientes de evidencia.
+
 1. Inventariar equipos, versiones y ediciones. Disponer de iPad físico, Mac con Xcode y cuenta Apple apropiada; Android físico y un equipo reiniciable para pruebas administradas; Windows de prueba con recuperacion administrativa. Probar sesion compartida con modo hijo y, como comparacion de resistencia, cuenta infantil estandar.
 2. Abrir el trámite de Family Controls para distribución y registrar estado sin publicar identificadores privados. El éxito con firma de desarrollo no prueba viabilidad de publicación.
 3. Ejecutar [los protocolos](pruebas-tecnicas.md) de iPad, Android y Windows. Se pueden trabajar de forma independiente cuando haya equipos.
