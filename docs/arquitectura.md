@@ -4,6 +4,8 @@ Estado: diseño inicial sujeto a resultados de fase 0. Fecha: 2026-10-23.
 
 ## Objetivo y alcance
 
+Actualizacion: se admite sesion compartida padre/hijo y se exige contrasena del responsable para desbloquear. Ver [ADR 0002](decisiones/0002-sesion-compartida-y-contrasena.md). El servicio Windows mantiene restricciones al cerrar la interfaz; su implementacion queda pendiente. La cuenta infantil separada es recomendacion de resistencia, no requisito del modo inicial.
+
 Administrar reglas familiares desde dispositivos compatibles y aplicarlas localmente en equipos de los hijos. La paridad de interfaz no implica paridad de capacidades. El producto mostrará qué restricciones están disponibles, activas o degradadas en cada equipo.
 
 La primera versión contempla categorías web, excepciones de dominios, bloqueo de aplicaciones donde sea viable, horarios y solicitudes de acceso. Quedan fuera la inspección de chats, capturas de pantalla, interceptación TLS y clasificación universal de imágenes o videos dentro de otras aplicaciones.

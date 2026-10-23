@@ -1,6 +1,6 @@
 # Plan por fases
 
-Estado inicial: todas las fases pendientes. Las estimaciones se fijarán después de la fase 0; no se comprometen fechas sin equipos, permisos y mediciones.
+Fase 0 iniciada en Windows; las siguientes fases siguen pendientes. Las estimaciones se fijarán después de la fase 0; no se comprometen fechas sin equipos, permisos y mediciones.
 
 | Fase | Entregables | Criterio de salida |
 | --- | --- | --- |
@@ -12,7 +12,9 @@ Estado inicial: todas las fases pendientes. Las estimaciones se fijarán despué
 
 ## Fase 0: primero los riesgos
 
-1. Inventariar equipos, versiones y ediciones. Disponer de iPad físico, Mac con Xcode y cuenta Apple apropiada; Android físico y un equipo reiniciable para pruebas administradas; Windows de prueba con cuentas de responsable e hijo estándar.
+Windows iniciado: [laboratorio ejecutable](../spikes/windows/README.md) e [informe parcial](../spikes/resultados/WINDOWS-01-inicial.md). Compilacion y pruebas de componentes completadas; auditoria/bloqueo real, navegadores y recuperacion pendientes. Se admite sesion compartida y desbloqueo con contrasena segun [ADR 0002](decisiones/0002-sesion-compartida-y-contrasena.md).
+
+1. Inventariar equipos, versiones y ediciones. Disponer de iPad físico, Mac con Xcode y cuenta Apple apropiada; Android físico y un equipo reiniciable para pruebas administradas; Windows de prueba con recuperacion administrativa. Probar sesion compartida con modo hijo y, como comparacion de resistencia, cuenta infantil estandar.
 2. Abrir el trámite de Family Controls para distribución y registrar estado sin publicar identificadores privados. El éxito con firma de desarrollo no prueba viabilidad de publicación.
 3. Ejecutar [los protocolos](pruebas-tecnicas.md) de iPad, Android y Windows. Se pueden trabajar de forma independiente cuando haya equipos.
 4. Consolidar evidencias con la [plantilla](../spikes/resultados/PLANTILLA.md), separar observado de supuesto y registrar versión exacta de cada entorno.

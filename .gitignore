@@ -32,3 +32,6 @@ Thumbs.db
 .vs/
 *.user
 *.log
+
+# Estado privado de pruebas (credenciales, SID, politicas y perfiles de navegador)
+spikes/windows/.local/

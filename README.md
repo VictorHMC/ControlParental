@@ -4,7 +4,7 @@ Control parental para familias con interfaz Flutter y componentes nativos para i
 
 ## Estado
 
-Arquitectura y plan inicial, 23 de octubre de 2026. No hay aplicación ejecutable ni bloqueos implementados. Todas las capacidades están pendientes de validación en dispositivos reales.
+Arquitectura y primer laboratorio Windows, 23 de octubre de 2026. Hay un filtro HTTPS local y una app inocua compilables con .NET, scripts AppLocker y pruebas de componentes. No hay aplicación Flutter ni servicio instalado. Las capacidades de bloqueo del dispositivo siguen pendientes de validación real.
 
 ## Documentación
 
@@ -13,6 +13,8 @@ Arquitectura y plan inicial, 23 de octubre de 2026. No hay aplicación ejecutabl
 - [Pruebas técnicas](docs/pruebas-tecnicas.md): protocolos por plataforma y matriz común.
 - [Decisión de tecnología](docs/decisiones/0001-flutter-y-componentes-nativos.md).
 - [Plantilla de resultados](spikes/resultados/PLANTILLA.md).
+- [Laboratorio Windows](spikes/windows/README.md) e [informe inicial](spikes/resultados/WINDOWS-01-inicial.md).
+- [Sesión compartida y contraseña de desbloqueo](docs/decisiones/0002-sesion-compartida-y-contrasena.md).
 
 ## Estructura prevista
 
@@ -24,7 +26,7 @@ spikes/                Pruebas aisladas y evidencias anonimizadas
 docs/                  Arquitectura, decisiones y plan
 ```
 
-Los directorios de implementación contienen únicamente una descripción de su propósito. Se generarán los proyectos con las herramientas oficiales después de validar las capacidades críticas y fijar versiones.
+`apps`, `packages` y `services` contienen por ahora una descripción de su propósito. `spikes/windows` contiene los primeros proyectos nativos de laboratorio. Se generarán las aplicaciones Flutter después de validar las capacidades críticas y fijar versiones.
 
 ## Primer objetivo
 
